@@ -1,0 +1,200 @@
+[3/07/2026 1:37:46 p. m.]Log created!
+[3/07/2026 1:37:46 p. m.]If steam has started True
+[3/07/2026 1:37:46 p. m.]   Steam_api.dll found
+[3/07/2026 1:37:46 p. m.]If is in big picture mode: False
+[3/07/2026 1:37:46 p. m.]If is started on the steam deck: False
+[3/07/2026 1:37:46 p. m.]If is started on steam VR: False
+[3/07/2026 1:37:46 p. m.]Starting System Info Collection
+[3/07/2026 1:37:46 p. m.]        DragFullWindows : True
+[3/07/2026 1:37:46 p. m.]        HighContrast : False
+[3/07/2026 1:37:46 p. m.]        MouseWheelScrollLines : 3
+[3/07/2026 1:37:46 p. m.]        PrimaryMonitorSize : {Width=1920, Height=1080}
+[3/07/2026 1:37:46 p. m.]        VerticalScrollBarWidth : 17
+[3/07/2026 1:37:46 p. m.]        HorizontalScrollBarHeight : 17
+[3/07/2026 1:37:46 p. m.]        CaptionHeight : 23
+[3/07/2026 1:37:46 p. m.]        BorderSize : {Width=1, Height=1}
+[3/07/2026 1:37:46 p. m.]        FixedFrameBorderSize : {Width=3, Height=3}
+[3/07/2026 1:37:46 p. m.]        VerticalScrollBarThumbHeight : 17
+[3/07/2026 1:37:46 p. m.]        HorizontalScrollBarThumbWidth : 17
+[3/07/2026 1:37:46 p. m.]        IconSize : {Width=32, Height=32}
+[3/07/2026 1:37:46 p. m.]        CursorSize : {Width=32, Height=32}
+[3/07/2026 1:37:46 p. m.]        MenuFont : [Font: Name=Segoe UI, Size=12, Units=0, GdiCharSet=1, GdiVerticalFont=False]
+[3/07/2026 1:37:46 p. m.]        MenuHeight : 20
+[3/07/2026 1:37:46 p. m.]        PowerStatus : System.Windows.Forms.PowerStatus
+[3/07/2026 1:37:46 p. m.]        WorkingArea : {X=0,Y=0,Width=1920,Height=1040}
+[3/07/2026 1:37:46 p. m.]        KanjiWindowHeight : 0
+[3/07/2026 1:37:46 p. m.]        MousePresent : True
+[3/07/2026 1:37:46 p. m.]        VerticalScrollBarArrowHeight : 17
+[3/07/2026 1:37:46 p. m.]        HorizontalScrollBarArrowWidth : 17
+[3/07/2026 1:37:46 p. m.]        DebugOS : False
+[3/07/2026 1:37:46 p. m.]        MouseButtonsSwapped : False
+[3/07/2026 1:37:46 p. m.]        MinimumWindowSize : {Width=136, Height=39}
+[3/07/2026 1:37:46 p. m.]        CaptionButtonSize : {Width=36, Height=22}
+[3/07/2026 1:37:46 p. m.]        FrameBorderSize : {Width=4, Height=4}
+[3/07/2026 1:37:46 p. m.]        MinWindowTrackSize : {Width=136, Height=39}
+[3/07/2026 1:37:46 p. m.]        DoubleClickSize : {Width=4, Height=4}
+[3/07/2026 1:37:46 p. m.]        DoubleClickTime : 500
+[3/07/2026 1:37:46 p. m.]        IconSpacingSize : {Width=93, Height=93}
+[3/07/2026 1:37:46 p. m.]        RightAlignedMenus : False
+[3/07/2026 1:37:46 p. m.]        PenWindows : False
+[3/07/2026 1:37:46 p. m.]        DbcsEnabled : False
+[3/07/2026 1:37:46 p. m.]        MouseButtons : 8
+[3/07/2026 1:37:46 p. m.]        Secure : False
+[3/07/2026 1:37:46 p. m.]        Border3DSize : {Width=2, Height=2}
+[3/07/2026 1:37:46 p. m.]        MinimizedWindowSpacingSize : {Width=160, Height=28}
+[3/07/2026 1:37:46 p. m.]        SmallIconSize : {Width=16, Height=16}
+[3/07/2026 1:37:46 p. m.]        ToolWindowCaptionHeight : 23
+[3/07/2026 1:37:46 p. m.]        ToolWindowCaptionButtonSize : {Width=22, Height=22}
+[3/07/2026 1:37:46 p. m.]        MenuButtonSize : {Width=19, Height=19}
+[3/07/2026 1:37:46 p. m.]        ArrangeStartingPosition : Hide
+[3/07/2026 1:37:46 p. m.]        ArrangeDirection : Left
+[3/07/2026 1:37:46 p. m.]        MinimizedWindowSize : {Width=160, Height=28}
+[3/07/2026 1:37:46 p. m.]        MaxWindowTrackSize : {Width=1940, Height=1100}
+[3/07/2026 1:37:46 p. m.]        PrimaryMonitorMaximizedWindowSize : {Width=1936, Height=1056}
+[3/07/2026 1:37:46 p. m.]        Network : True
+[3/07/2026 1:37:46 p. m.]        TerminalServerSession : False
+[3/07/2026 1:37:46 p. m.]        BootMode : Normal
+[3/07/2026 1:37:46 p. m.]        DragSize : {Width=4, Height=4}
+[3/07/2026 1:37:46 p. m.]        ShowSounds : False
+[3/07/2026 1:37:46 p. m.]        MenuCheckSize : {Width=15, Height=15}
+[3/07/2026 1:37:46 p. m.]        MidEastEnabled : False
+[3/07/2026 1:37:46 p. m.]        NativeMouseWheelSupport : True
+[3/07/2026 1:37:46 p. m.]        MouseWheelPresent : True
+[3/07/2026 1:37:46 p. m.]        VirtualScreen : {X=0,Y=0,Width=1920,Height=1080}
+[3/07/2026 1:37:46 p. m.]        MonitorCount : 1
+[3/07/2026 1:37:46 p. m.]        MonitorsSameDisplayFormat : True
+[3/07/2026 1:37:46 p. m.]        UserInteractive : True
+[3/07/2026 1:37:46 p. m.]        IsDropShadowEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsFlatMenuEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsFontSmoothingEnabled : True
+[3/07/2026 1:37:46 p. m.]        FontSmoothingContrast : 1200
+[3/07/2026 1:37:46 p. m.]        FontSmoothingType : 2
+[3/07/2026 1:37:46 p. m.]        IconHorizontalSpacing : 93
+[3/07/2026 1:37:46 p. m.]        IconVerticalSpacing : 93
+[3/07/2026 1:37:46 p. m.]        IsIconTitleWrappingEnabled : True
+[3/07/2026 1:37:46 p. m.]        MenuAccessKeysUnderlined : False
+[3/07/2026 1:37:46 p. m.]        KeyboardDelay : 1
+[3/07/2026 1:37:46 p. m.]        IsKeyboardPreferred : False
+[3/07/2026 1:37:46 p. m.]        KeyboardSpeed : 31
+[3/07/2026 1:37:46 p. m.]        MouseHoverSize : {Width=4, Height=4}
+[3/07/2026 1:37:46 p. m.]        MouseHoverTime : 400
+[3/07/2026 1:37:46 p. m.]        MouseSpeed : 10
+[3/07/2026 1:37:46 p. m.]        IsSnapToDefaultEnabled : False
+[3/07/2026 1:37:46 p. m.]        PopupMenuAlignment : Right
+[3/07/2026 1:37:46 p. m.]        IsMenuFadeEnabled : True
+[3/07/2026 1:37:46 p. m.]        MenuShowDelay : 400
+[3/07/2026 1:37:46 p. m.]        IsComboBoxAnimationEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsTitleBarGradientEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsHotTrackingEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsListBoxSmoothScrollingEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsMenuAnimationEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsSelectionFadeEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsToolTipAnimationEnabled : True
+[3/07/2026 1:37:46 p. m.]        UIEffectsEnabled : True
+[3/07/2026 1:37:46 p. m.]        IsActiveWindowTrackingEnabled : False
+[3/07/2026 1:37:46 p. m.]        ActiveWindowTrackingDelay : 0
+[3/07/2026 1:37:46 p. m.]        IsMinimizeRestoreAnimationEnabled : False
+[3/07/2026 1:37:46 p. m.]        BorderMultiplierFactor : 1
+[3/07/2026 1:37:46 p. m.]        CaretBlinkTime : 530
+[3/07/2026 1:37:46 p. m.]        CaretWidth : 1
+[3/07/2026 1:37:46 p. m.]        MouseWheelScrollDelta : 120
+[3/07/2026 1:37:46 p. m.]        VerticalFocusThickness : 1
+[3/07/2026 1:37:46 p. m.]        HorizontalFocusThickness : 1
+[3/07/2026 1:37:46 p. m.]        VerticalResizeBorderThickness : 4
+[3/07/2026 1:37:46 p. m.]        HorizontalResizeBorderThickness : 4
+[3/07/2026 1:37:46 p. m.]        ScreenOrientation : Angle0
+[3/07/2026 1:37:46 p. m.]        SizingBorderWidth : 1
+[3/07/2026 1:37:46 p. m.]        SmallCaptionButtonSize : {Width=22, Height=22}
+[3/07/2026 1:37:46 p. m.]        MenuBarButtonSize : {Width=19, Height=19}
+[3/07/2026 1:37:46 p. m.]OS is: Windows
+[3/07/2026 1:37:46 p. m.]    X64
+[3/07/2026 1:37:46 p. m.]    Microsoft Windows 10.0.19045 
+[3/07/2026 1:37:46 p. m.]System Info Collection Complete!
+[3/07/2026 1:37:46 p. m.]Starting Hardware Info Collection
+[3/07/2026 1:37:46 p. m.]Setings from MyDocuments loaded succeeded
+[3/07/2026 1:37:47 p. m.]language set: English
+[3/07/2026 1:37:47 p. m.]BackgroundImage set to main in user folder, which is Main
+[3/07/2026 1:37:47 p. m.]BackgroundImage trying to load:C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40000 Gladius - Relics of War\Launcher\Images\Main.png
+[3/07/2026 1:37:47 p. m.]Back groundImage has been loaded
+[3/07/2026 1:37:47 p. m.]Theme loaded: Main
+[3/07/2026 1:37:47 p. m.]Top Cover loaded: True
+[3/07/2026 1:37:47 p. m.]Bottom Cover loaded: True
+[3/07/2026 1:37:47 p. m.]Checking brand
+[3/07/2026 1:37:47 p. m.]Setting up for: steam
+[3/07/2026 1:37:47 p. m.]     Setting gameID to: warhammer-40000-gladius-relics-of-war
+[3/07/2026 1:37:47 p. m.]     Setting website link to: https://store.steampowered.com/app/489630
+[3/07/2026 1:37:47 p. m.]     Setting support link to: https://store.steampowered.com/app/489630
+[3/07/2026 1:37:47 p. m.]     Setting forum link to: https://steamcommunity.com/app/489630/discussions/
+[3/07/2026 1:37:47 p. m.]     Setting logoWebsite link to: https://store.steampowered.com/publisher/Slitherine
+[3/07/2026 1:37:47 p. m.]     Update button Hidden
+[3/07/2026 1:37:47 p. m.]Steam set up!
+[3/07/2026 1:37:47 p. m.]setting up for Marketing browser
+[3/07/2026 1:37:47 p. m.]setting up buttons
+[3/07/2026 1:37:47 p. m.]2 Making Marketing Browser
+[3/07/2026 1:37:47 p. m.]2 Marketing panel setting up
+[3/07/2026 1:37:47 p. m.]2 Marketing panel set up
+[3/07/2026 1:37:47 p. m.]Button begining created
+[3/07/2026 1:37:47 p. m.]     Button is file or folder
+[3/07/2026 1:37:47 p. m.]     \whatsnew.pdf
+[3/07/2026 1:37:47 p. m.]     Button is called Version: 1.18.01
+[3/07/2026 1:37:47 p. m.]Button Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]Button begining created
+[3/07/2026 1:37:47 p. m.]     Button is GameEXE:
+[3/07/2026 1:37:47 p. m.]     \Binaries\Windows-x86_64\Gladius.exe
+[3/07/2026 1:37:47 p. m.]     Button is Large
+[3/07/2026 1:37:47 p. m.]Button Has been created!!
+[3/07/2026 1:37:47 p. m.]Button begining created
+[3/07/2026 1:37:47 p. m.]     Button is Manual:
+[3/07/2026 1:37:47 p. m.]     \Manuals\Gladius manual EBOOK.pdf
+[3/07/2026 1:37:47 p. m.]     Button is normal sized
+[3/07/2026 1:37:47 p. m.]Button Has been created!!
+[3/07/2026 1:37:47 p. m.]Starting button event binding
+[3/07/2026 1:37:47 p. m.]button events have be bound
+[3/07/2026 1:37:47 p. m.]Button begining created
+[3/07/2026 1:37:47 p. m.]     Button is website:
+[3/07/2026 1:37:47 p. m.]     https://store.steampowered.com/app/489630
+[3/07/2026 1:37:47 p. m.]     Button is called Product Page
+[3/07/2026 1:37:47 p. m.]Button Has been created!!
+[3/07/2026 1:37:47 p. m.]Button begining created
+[3/07/2026 1:37:47 p. m.]     Button is website:
+[3/07/2026 1:37:47 p. m.]     https://steamcommunity.com/app/489630/discussions/
+[3/07/2026 1:37:47 p. m.]     Button is called Forum
+[3/07/2026 1:37:47 p. m.]Button Has been created!!
+[3/07/2026 1:37:47 p. m.]Button begining created
+[3/07/2026 1:37:47 p. m.]     Button is website:
+[3/07/2026 1:37:47 p. m.]     https://help.steampowered.com/en/wizard/HelpWithGame/?appid=489630
+[3/07/2026 1:37:47 p. m.]     Button is called Support
+[3/07/2026 1:37:47 p. m.]Button Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]community icon Has been created!!
+[3/07/2026 1:37:47 p. m.]Launcher is set up!
+[3/07/2026 1:37:47 p. m.]2 Marketing panel attached
+[3/07/2026 1:37:47 p. m.]     New Pic box called: PictureBox_
+[3/07/2026 1:37:47 p. m.]2 Marketing panel pic setting up
+[3/07/2026 1:37:47 p. m.]2 Marketing panel pic attached
+[3/07/2026 1:37:47 p. m.]2 Marketing panel internet testing
+[3/07/2026 1:37:47 p. m.]2 Marketing panel internet has returned
+[3/07/2026 1:37:47 p. m.]2 Marketing panel internet connected
+[3/07/2026 1:37:48 p. m.]     Navigating to: https://www.slitherine.com/newlauncher/steam/game/warhammer-40000-gladius-relics-of-war
+[3/07/2026 1:37:48 p. m.]     2 Navigating to: https://www.slitherine.com/newlauncher/steam/game/warhammer-40000-gladius-relics-of-war
+[3/07/2026 1:37:48 p. m.]2 Marketing Browser made
+[3/07/2026 1:37:49 p. m.]User is considering: 
+[3/07/2026 1:37:49 p. m.]User is considering: 
+[3/07/2026 1:37:50 p. m.]User is no longer considering: 
+[3/07/2026 1:37:50 p. m.]User is no longer considering: 
+[3/07/2026 1:37:50 p. m.]User is considering: Manual
+[3/07/2026 1:37:50 p. m.]User is no longer considering: Manual
+[3/07/2026 1:37:50 p. m.]User is considering: Play
+[3/07/2026 1:37:50 p. m.]User is no longer considering: Play
+[3/07/2026 1:37:50 p. m.]User is considering: Version: 1.18.01
+[3/07/2026 1:37:50 p. m.]User is no longer considering: Version: 1.18.01
+[3/07/2026 1:37:52 p. m.]Attemting to close program

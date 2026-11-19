@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ookini | Café de Especialidad &amp; Tradición Artesanal</title>
+    
+    <!-- Tailwind CSS para utilidades y diseño responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cormorant Garamond (Editorial/Rústico) y Plus Jakarta Sans (Limpio/Legible) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#F7F3EB',
+                            200: '#EDE5D8',
+                            300: '#DFD2BE',
+                        },
+                        espresso: {
+                            800: '#3D2B22',
+                            900: '#2A1D17',
+                            950: '#1C130E',
+                        },
+                        cinnamon: {
+                            500: '#B5653B',
+                            600: '#9A502A',
+                            700: '#7D3E1E',
+                        },
+                        sage: {
+                            700: '#545E4E',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Textura sutil de papel artesanal en el fondo */
+        body {
+            background-color: #FDFBF7;
+            color: #2A1D17;
+            background-image: radial-gradient(#DFD2BE 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+
+        /* Animaciones suaves de aparición */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo editorial para líneas divisorias */
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #DFD2BE, transparent);
+        }
+
+        /* Transición suave para tarjetas del menú */
+        .menu-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(42, 29, 23, 0.12);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-cinnamon-500 selection:text-white">
+
+    <!-- Navegación Minimalista y Cálida -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-cream-50/90 backdrop-blur-md border-b border-cream-200/70">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Marca -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-full bg-espresso-900 text-cream-50 flex items-center justify-center font-serif italic text-xl transition-transform group-hover:scale-105">
+                    O
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-semibold tracking-wide text-espresso-900 block leading-none">Ookini</span>
+                    <span class="text-[10px] uppercase tracking-[0.25em] text-cinnamon-600 font-medium">Café de Especialidad</span>
+                </div>
+            </a>
+
+            <!-- Enlaces Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-espresso-800">
+                <a href="#esencia" class="hover:text-cinnamon-600 transition-colors">Nuestra Esencia</a>
+                <a href="#carta" class="hover:text-cinnamon-600 transition-colors">La Carta</a>
+                <a href="#galeria" class="hover:text-cinnamon-600 transition-colors">Galería</a>
+                <a href="#visitanos" class="px-5 py-2.5 rounded-full bg-espresso-900 text-cream-50 hover:bg-cinnamon-600 transition-colors">
+                    Visítanos
+                </a>
+            </nav>
+
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-espresso-900 focus:outline-none" aria-label="Abrir menú">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-50 border-b border-cream-200 px-6 py-5 space-y-4">
+            <a href="#esencia" class="block text-base font-medium text-espresso-900 hover:text-cinnamon-600">Nuestra Esencia</a>
+            <a href="#carta" class="block text-base font-medium text-espresso-900 hover:text-cinnamon-600">La Carta</a>
+            <a href="#galeria" class="block text-base font-medium text-espresso-900 hover:text-cinnamon-600">Galería</a>
+            <a href="#visitanos" class="inline-block px-5 py-2.5 rounded-full bg-espresso-900 text-cream-50 text-sm font-medium">Visítanos</a>
+        </div>
+    </header>
+
+    <!-- Sección Hero (Portada Editorial) -->
+    <section id="inicio" class="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Columna de Texto -->
+                <div class="lg:col-span-6 space-y-6 fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream-200/80 text-cinnamon-700 text-xs font-semibold uppercase tracking-widest">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        Tradición, Gratitud &amp; Especias
+                    </div>
+                    
+                    <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-espresso-950 leading-[1.08]">
+                        El calor de un café <span class="italic text-cinnamon-600">honesto</span>, servido con gratitud.
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-espresso-800/85 leading-relaxed max-w-xl font-light">
+                        En <strong>Ookini</strong> celebramos la pausa cotidiana. Granos de especialidad extraídos al momento, perfumados con canela en polvo, especias cálidas y acompañados de repostería recién horneada.
+                    </p>
+                    
+                    <div class="pt-2 flex flex-wrap items-center gap-4">
+                        <a href="#carta" class="px-7 py-3.5 rounded-full bg-espresso-900 text-cream-50 font-medium text-sm hover:bg-cinnamon-600 transition-all shadow-sm">
+                            Explorar la Carta
+                        </a>
+                        <a href="#galeria" class="px-7 py-3.5 rounded-full border border-espresso-900/25 text-espresso-900 font-medium text-sm hover:bg-cream-200/60 transition-all">
+                            Ver Galería
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna de Imagen Principal -->
+                <div class="lg:col-span-6 fade-in-up">
+                    <div class="relative">
+                        <!-- Marco rústico decorativo -->
+                        <div class="absolute -inset-3 rounded-3xl border border-cinnamon-500/25 translate-x-2 translate-y-2 pointer-events-none"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5] bg-cream-200">
+                            <img 
+                                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=85" 
+                                alt="Taza de café de especialidad Ookini con espuma cremosa y canela en polvo sobre mesa de madera" 
+                                class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+                            >
+                            <!-- Etiqueta flotante de la bebida insignia -->
+                            <div class="absolute bottom-5 left-5 right-5 bg-cream-50/95 backdrop-blur-md p-4 rounded-xl border border-cream-200 shadow-sm flex items-center justify-between">
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-widest text-cinnamon-600 font-semibold block">Bebida Insignia</span>
+                                    <p class="font-serif text-xl font-semibold text-espresso-900">Ookini Clásico con Canela</p>
+                                </div>
+                                <span class="w-10 h-10 rounded-full bg-cream-200 flex items-center justify-center text-cinnamon-700">
+                                    <i data-lucide="coffee" class="w-5 h-5"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="divider-line max-w-5xl mx-auto"></div>
+
+    <!-- Sección: Nuestra Esencia -->
+    <section id="esencia" class="py-20 md:py-28">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16 fade-in-up">
+                <span class="text-xs uppercase tracking-[0.25em] text-cinnamon-600 font-semibold">Nuestra Filosofía</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso-950">
+                    “Ookini” significa <span class="italic">muchas gracias</span>
+                </h2>
+                <p class="text-espresso-800/80 font-light leading-relaxed">
+                    Nacimos con la idea de rescatar la cafetería tradicional: un espacio limpio, de maderas nobles y aromas familiares donde cada taza honra el trabajo del caficultor y el placer de lo simple.
+                </p>
+            </div>
+
+            <!-- 3 Pilares de la Cafetería -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-cream-100/80 border border-cream-200 p-8 rounded-2xl space-y-4 fade-in-up">
+                    <div class="w-12 h-12 rounded-xl bg-cream-200 text-cinnamon-700 flex items-center justify-center">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold text-espresso-900">Extracción Tradicional</h3>
+                    <p class="text-sm text-espresso-800/80 leading-relaxed">
+                        Calibramos nuestra máquina espresso cada mañana para lograr una crema avellanada, cuerpo sedoso y dulzor natural en cada servicio.
+                    </p>
+                </div>
+
+                <div class="bg-cream-100/80 border border-cream-200 p-8 rounded-2xl space-y-4 fade-in-up">
+                    <div class="w-12 h-12 rounded-xl bg-cream-200 text-cinnamon-700 flex items-center justify-center">
+                        <i data-lucide="flower-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold text-espresso-900">Especias Cálidas</h3>
+                    <p class="text-sm text-espresso-800/80 leading-relaxed">
+                        Seleccionamos canela en rama molida al día, nuez moscada y anís estrellado para perfumar nuestras bebidas sin ocultar la esencia del grano.
+                    </p>
+                </div>
+
+                <div class="bg-cream-100/80 border border-cream-200 p-8 rounded-2xl space-y-4 fade-in-up">
+                    <div class="w-12 h-12 rounded-xl bg-cream-200 text-cinnamon-700 flex items-center justify-center">
+                        <i data-lucide="croissant" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold text-espresso-900">Horneado en Casa</h3>
+                    <p class="text-sm text-espresso-800/80 leading-relaxed">
+                        Recetas caseras preparadas en pequeños lotes diarios, pensadas específicamente para armonizar con las notas especiadas de nuestro café.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: La Carta (Interactiva con Filtros) -->
+    <section id="carta" class="py-20 md:py-28 bg-cream-100/70 border-y border-cream-200">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <!-- Encabezado de La Carta -->
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-12 fade-in-up">
+                <span class="text-xs uppercase tracking-[0.25em] text-cinnamon-600 font-semibold">Selección Artesanal</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso-950">Nuestra Carta</h2>
+                <p class="text-espresso-800/80 font-light">
+                    Preparaciones honestas, ingredientes naturales y el aroma inconfundible de la canela recién espolvoreada.
+                </p>
+            </div>
+
+            <!-- Botones de Filtro -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in-up" role="tablist" aria-label="Categorías del menú">
+                <button onclick="filterMenu('todos')" data-filter="todos" class="filter-btn active px-5 py-2 rounded-full text-sm font-medium bg-espresso-900 text-cream-50 transition-all">
+                    Toda la Carta
+                </button>
+                <button onclick="filterMenu('tradicional')" data-filter="tradicional" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-cream-50 text-espresso-800 border border-cream-300 hover:border-espresso-900 transition-all">
+                    Cafés de Máquina
+                </button>
+                <button onclick="filterMenu('especiados')" data-filter="especiados" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-cream-50 text-espresso-800 border border-cream-300 hover:border-espresso-900 transition-all">
+                    Infusiones &amp; Especias
+                </button>
+                <button onclick="filterMenu('reposteria')" data-filter="reposteria" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-cream-50 text-espresso-800 border border-cream-300 hover:border-espresso-900 transition-all">
+                    Repostería Artesanal
+                </button>
+            </div>
+
+            <!-- Grid de Productos del Menú -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Producto 1: Ookini Clásico (Destacado) -->
+                <article data-category="tradicional" class="menu-card bg-cream-50 rounded-2xl overflow-hidden border-2 border-cinnamon-500/40 flex flex-col justify-between relative">
+                    <div class="absolute top-4 right-4 z-10 bg-cinnamon-600 text-cream-50 text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                        Insignia de la Casa
+                    </div>
+                    <div>
+                        <div class="h-56 overflow-hidden bg-cream-200">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Ookini Clásico" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-baseline justify-between gap-2">
+                                <h3 class="font-serif text-2xl font-semibold text-espresso-950">Ookini Clásico</h3>
+                                <span class="font-serif text-xl font-semibold text-cinnamon-600">$6.500</span>
+                            </div>
+                            <p class="text-sm text-espresso-800/80 leading-relaxed">
+                                Nuestro espresso tradicional extraído en máquina, coronado con una fina lluvia de canela en polvo recién molida que despierta sus notas dulces y achocolatadas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Espresso</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Canela en polvo</span>
+                    </div>
+                </article>
+
+                <!-- Producto 2: Latte Especiado de la Casa -->
+                <article data-category="especiados" class="menu-card bg-cream-50 rounded-2xl overflow-hidden border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-cream-200">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80" alt="Latte Especiado Ookini" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-baseline justify-between gap-2">
+                                <h3 class="font-serif text-2xl font-semibold text-espresso-950">Latte de Especias Cálidas</h3>
+                                <span class="font-serif text-xl font-semibold text-cinnamon-600">$8.200</span>
+                            </div>
+                            <p class="text-sm text-espresso-800/80 leading-relaxed">
+                                Carga doble de espresso con leche texturizada sedosa, infusionada suavemente con canela en rama, una pizca de nuez moscada rallada y aroma de anís estrellado.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Canela en rama</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Nuez moscada</span>
+                    </div>
+                </article>
+
+                <!-- Producto 3: Torta Húmeda de Banano y Nueces -->
+                <article data-category="reposteria" class="menu-card bg-cream-50 rounded-2xl overflow-hidden border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-cream-200">
+                            <img src="https://images.unsplash.com/photo-1605286978633-2dec93ff88a2?auto=format&fit=crop&w=800&q=80" alt="Torta húmeda de banano, nueces y canela" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-baseline justify-between gap-2">
+                                <h3 class="font-serif text-2xl font-semibold text-espresso-950">Torta de Banano &amp; Nueces</h3>
+                                <span class="font-serif text-xl font-semibold text-cinnamon-600">$7.800</span>
+                            </div>
+                            <p class="text-sm text-espresso-800/80 leading-relaxed">
+                                Receta artesanal de miga tierna y húmeda, horneada con bananos maduros, trozos tostados de nuez de nogal y un toque aromático de canela.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Horneado diario</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Nueces &amp; Canela</span>
+                    </div>
+                </article>
+
+                <!-- Producto 4: Cortado Tradicional -->
+                <article data-category="tradicional" class="menu-card bg-cream-50 rounded-2xl overflow-hidden border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-cream-200">
+                            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" alt="Cortado Tradicional" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-baseline justify-between gap-2">
+                                <h3 class="font-serif text-2xl font-semibold text-espresso-950">Cortado de la Casa</h3>
+                                <span class="font-serif text-xl font-semibold text-cinnamon-600">$6.800</span>
+                            </div>
+                            <p class="text-sm text-espresso-800/80 leading-relaxed">
+                                Equilibrio perfecto entre intensidad y suavidad: espresso doble cortado con un toque de leche tibia cremada para resaltar el carácter del grano.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Espresso Doble</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Cremoso</span>
+                    </div>
+                </article>
+
+                <!-- Producto 5: Infusión Aromática de Anís y Canela -->
+                <article data-category="especiados" class="menu-card bg-cream-50 rounded-2xl overflow-hidden border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-cream-200">
+                            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Americano Especiado con Anís Estrellado" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-baseline justify-between gap-2">
+                                <h3 class="font-serif text-2xl font-semibold text-espresso-950">Americano con Anís &amp; Canela</h3>
+                                <span class="font-serif text-xl font-semibold text-cinnamon-600">$7.000</span>
+                            </div>
+                            <p class="text-sm text-espresso-800/80 leading-relaxed">
+                                Café largo de máquina infusionado en taza con una flor de anís estrellado y astilla de canela. Limpio, reconfortante y profundamente aromático.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Anís estrellado</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Sin leche</span>
+                    </div>
+                </article>
+
+                <!-- Producto 6: Maridaje Ookini -->
+                <article data-category="reposteria" class="menu-card bg-cream-50 rounded-2xl overflow-hidden border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-cream-200">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Ritual Ookini" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-baseline justify-between gap-2">
+                                <h3 class="font-serif text-2xl font-semibold text-espresso-950">Ritual de Tarde Ookini</h3>
+                                <span class="font-serif text-xl font-semibold text-cinnamon-600">$13.000</span>
+                            </div>
+                            <p class="text-sm text-espresso-800/80 leading-relaxed">
+                                La experiencia completa de nuestra casa: una taza caliente de <strong>Ookini Clásico</strong> con canela acompañada de una rebanada generosa de torta de banano y nueces.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cinnamon-500/15 text-cinnamon-700 font-medium">Recomendado</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-cream-200/70 text-espresso-800">Maridaje</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Galería Visual (Fotografía de Alta Calidad con Visor Lightbox) -->
+    <section id="galeria" class="py-20 md:py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 fade-in-up">
+                <div class="space-y-3">
+                    <span class="text-xs uppercase tracking-[0.25em] text-cinnamon-600 font-semibold">Atmósfera &amp; Detalles</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso-950">El Rincón de Ookini</h2>
+                </div>
+                <p class="text-sm text-espresso-800/75 max-w-md font-light">
+                    Haz clic en cualquier fotografía para apreciar los detalles de nuestra barra, la textura de los granos y la calidez de nuestro espacio.
+                </p>
+            </div>
+
+            <!-- Mosaico Editorial -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 fade-in-up">
+                <div onclick="openLightbox(this)" class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-[3/4] lg:col-span-2 lg:row-span-2 bg-cream-200">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=85" alt="Interior rústico y luminoso de la cafetería Ookini con mesas de madera natural" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-cream-50 font-serif text-xl">Nuestro salón principal: madera natural y luz cálida</p>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox(this)" class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square bg-cream-200">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=85" alt="Extracción perfecta de café espresso en máquina tradicional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <p class="text-cream-50 font-serif text-lg">Extracción precisa en barra</p>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox(this)" class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square bg-cream-200">
+                    <img src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?auto=format&fit=crop&w=800&q=85" alt="Especias rústicas: ramas de canela, anís estrellado y nuez moscada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <p class="text-cream-50 font-serif text-lg">Canela, anís y nuez moscada</p>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox(this)" class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square sm:col-span-2 lg:col-span-2 lg:aspect-[2/1] bg-cream-200">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1000&q=85" alt="Granos de café tostados artesanalmente y taza servida" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                        <p class="text-cream-50 font-serif text-lg">Selección de granos frescos tostados a punto medio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Visítanos & Pie de Página -->
+    <footer id="visitanos" class="bg-espresso-950 text-cream-100 pt-20 pb-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-cream-100/15">
+                
+                <!-- Columna Marca -->
+                <div class="md:col-span-5 space-y-5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-cream-100 text-espresso-950 flex items-center justify-center font-serif italic text-2xl font-bold">
+                            O
+                        </div>
+                        <span class="font-serif text-3xl font-semibold tracking-wide text-cream-50">Ookini</span>
+                    </div>
+                    <p class="text-cream-200/75 text-sm leading-relaxed max-w-sm font-light">
+                        Una cafetería tradicional de estética limpia y rústica. Ven por el aroma de la canela recién espolvoreada, quédate por la calidez de nuestra mesa.
+                    </p>
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="#" aria-label="Instagram de Ookini" class="w-10 h-10 rounded-full border border-cream-100/20 flex items-center justify-center text-cream-100 hover:bg-cinnamon-600 hover:border-cinnamon-600 transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp de Ookini" class="w-10 h-10 rounded-full border border-cream-100/20 flex items-center justify-center text-cream-100 hover:bg-cinnamon-600 hover:border-cinnamon-600 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna Horarios -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-xl text-cream-50">Horarios de Barra</h4>
+                    <ul class="space-y-2.5 text-sm text-cream-200/80 font-light">
+                        <li class="flex justify-between max-w-xs">
+                            <span>Lunes a Viernes</span>
+                            <span class="text-cream-50 font-medium">7:30 AM – 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between max-w-xs">
+                            <span>Sábados</span>
+                            <span class="text-cream-50 font-medium">8:30 AM – 8:00 PM</span>
+                        </li>
+                        <li class="flex justify-between max-w-xs">
+                            <span>Domingos y Festivos</span>
+                            <span class="text-cream-50 font-medium">9:00 AM – 5:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna Ubicación -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="font-serif text-xl text-cream-50">Encuéntranos</h4>
+                    <p class="text-sm text-cream-200/80 font-light leading-relaxed">
+                        Calle de los Artesanos #14-28<br>
+                        Barrio Tradicional
+                    </p>
+                    <p class="text-xs text-cinnamon-500 uppercase tracking-widest font-semibold pt-1">
+                        Granos frescos · Panadería diaria
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream-200/50 gap-4">
+                <p>&copy; <span id="year"></span> Ookini Café de Especialidad. Todos los derechos reservados.</p>
+                <p class="font-serif italic text-sm text-cream-200/70">“Ookini” — Gracias por compartir una taza con nosotros.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Lightbox para Galería Fotográfica -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-espresso-950/90 backdrop-blur-sm items-center justify-center p-4 sm:p-8" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-cream-50 hover:text-cinnamon-500 transition-colors" aria-label="Cerrar imagen">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="max-w-4xl w-full space-y-4 text-center" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="" class="max-h-[80vh] mx-auto rounded-xl shadow-2xl object-contain">
+            <p id="lightbox-caption" class="font-serif text-xl text-cream-100"></p>
+        </div>
+    </div>
+
+    <!-- Scripts de Interactividad -->
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+
+        // Año dinámico en el pie de página
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Menú móvil toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Filtrado interactivo de La Carta
+        function filterMenu(category) {
+            const cards = document.querySelectorAll('#menu-grid article');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Actualizar estado visual de los botones
+            buttons.forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.classList.remove('bg-cream-50', 'text-espresso-800', 'border', 'border-cream-300');
+                    btn.classList.add('bg-espresso-900', 'text-cream-50');
+                } else {
+                    btn.classList.remove('bg-espresso-900', 'text-cream-50');
+                    btn.classList.add('bg-cream-50', 'text-espresso-800', 'border', 'border-cream-300');
+                }
+            });
+
+            // Mostrar/Ocultar tarjetas según categoría
+            cards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Visor Lightbox para las fotografías de la galería
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxCaption.textContent = img.alt;
+
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Cerrar Lightbox con tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Observador de intersección para animaciones suaves al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
